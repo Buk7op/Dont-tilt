@@ -5,17 +5,26 @@ using UnityEngine.UI;
 
 public class Lose : MonoBehaviour {
 	public GameObject pointControl, playerObj;
-	public int Money;
-	public int Score;
-	public int HighScore;
-	public int Multipier;
+	public int Money, saveMoney, Score, HighScore, Multipier;
 	private float timer;
 	public Text txtScore, txtHighScore, txtMoney;
 	GameObject[] pous;
+	void Start() {
+		Money = PlayerPrefs.GetInt ("savemoney");
+		HighScore = PlayerPrefs.GetInt ("savescore");
+	}
+
 	void Update () {
+
+	//----------Счет и сохранение денег------------------
 		txtMoney.text = "" + Money;
+		PlayerPrefs.SetInt ("savemoney", Money);
+	//---------------------------------------------------
+
 		txtScore.text = "" + Score;
 		txtHighScore.text = "" + HighScore;
+		PlayerPrefs.SetInt ("savescore", HighScore);
+		PlayerPrefs.Save ();
 		pous = GameObject.FindGameObjectsWithTag ("pou");
 		Multipier = pous.Length;
 		timer += Time.deltaTime;
