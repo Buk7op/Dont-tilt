@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.9, y: 7}
+  m_AnchoredPosition: {x: 43.900024, y: 6.9999695}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816380037
@@ -1000,11 +1000,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointControl: {fileID: 1528214128}
   playerObj: {fileID: 1160293333}
+  Money: 0
   Score: 0
   HighScore: 0
   Multipier: 0
   txtScore: {fileID: 671818342}
   txtHighScore: {fileID: 1399138977}
+  txtMoney: {fileID: 1055499688}
 --- !u!114 &1879707478
 MonoBehaviour:
   m_ObjectHideFlags: 0

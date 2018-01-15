@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class Lose : MonoBehaviour {
 	public GameObject pointControl, playerObj;
+	public int Money;
 	public int Score;
 	public int HighScore;
 	public int Multipier;
 	private float timer;
-	public Text txtScore, txtHighScore;
+	public Text txtScore, txtHighScore, txtMoney;
 	GameObject[] pous;
 	void Update () {
-		txtScore.text ="" + Score;
+		txtMoney.text = "" + Money;
+		txtScore.text = "" + Score;
 		txtHighScore.text = "" + HighScore;
 		pous = GameObject.FindGameObjectsWithTag ("pou");
 		Multipier = pous.Length;
