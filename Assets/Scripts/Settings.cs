@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour {
 	public bool SettingDown;
-	public GameObject SettingsMenu;
+	public GameObject SettingsMenu, mainMenu;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,10 +14,12 @@ public class Settings : MonoBehaviour {
 	void Update () {
 		if(SettingDown == true)
 		{
+			mainMenu.SetActive (false);
 			SettingsMenu.SetActive (true);
 		}
 		else if(SettingDown == false)
 		{
+			
 			SettingsMenu.SetActive (false);
 		}
 	}

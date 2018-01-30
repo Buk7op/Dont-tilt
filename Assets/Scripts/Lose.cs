@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Lose : MonoBehaviour {
-	public GameObject pointControl, playerObj;
+	public GameObject pointControl, playerObj, coins;
 	public int Money, saveMoney, Score, HighScore, Multipier;
 	private float timer;
 	public Text txtScore, txtHighScore, txtMoney;
@@ -32,10 +32,12 @@ public class Lose : MonoBehaviour {
 			if (timer > 1 / Multipier) {
 				Score++;
 				timer = 0;
+				coins.SetActive (true);
 			}
-		} 
-		else
+		} else {
+			coins.SetActive (false);
 			Score = 0;
+		}
 		if (Score > HighScore)
 			HighScore = Score;
 	}

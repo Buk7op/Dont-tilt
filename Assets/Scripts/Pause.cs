@@ -42,6 +42,7 @@ public class Pause : MonoBehaviour {
         }
 		else if(isPaused == false && difference < 1.05 && gogo == true)
         {
+			mmButton.SetActive (false);
 			shade.SetActive (false);
             timing = 1;
 			menu.SetActive (false);
@@ -73,7 +74,7 @@ public class Pause : MonoBehaviour {
 
 	public void MainMenu (bool tap) {
 		mainMenu.SetActive (tap);
-		mmButton.SetActive (!tap);
+
 	}
 
 	public void Exit (bool tap) {
